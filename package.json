@@ -1,0 +1,27 @@
+{
+  "name": "TelegramBot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index",
+    "dev": "nodemon index"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/naz-i-ya/TechBuddyTelegramBot[TBTB].git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/naz-i-ya/TechBuddyTelegramBot[TBTB]#issues"
+  },
+  "homepage": "https://github.com/naz-i-ya/TechBuddyTelegramBot[TBTB]#readme",
+  "dependencies": {
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "telegraf": "^4.7.0"
+  }
+}
