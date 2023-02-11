@@ -17,7 +17,7 @@ const getAllCommands = async () => {
       .filter((file) => file.endsWith('.js'));    // get files from each command folder
     for (const file of commandFiles) {
       const command = await import(`./src/commands/${folder}/${file}`); // dynamically import command files
-      collection.set(command.default.name, command);
+      collection.set(command.name, command);
     }
   }
 }

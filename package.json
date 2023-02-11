@@ -10,16 +10,17 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/naz-i-ya/TechBuddyTelegramBot[TBTB].git"
+    "url": "git+https://github.com/naz-i-ya/TelegramBot.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/naz-i-ya/TechBuddyTelegramBot[TBTB]#issues"
+    "url": "https://github.com/naz-i-ya/TelegramBot[#issues]"
   },
-  "homepage": "https://github.com/naz-i-ya/TechBuddyTelegramBot[TBTB]#readme",
+  "homepage": "https://github.com/naz-i-ya/TelegramBot[#readme]",
   "dependencies": {
+    "axios": "^1.2.5",
     "dotenv": "^16.0.0",
     "express": "^4.17.3",
     "telegraf": "^4.7.0"

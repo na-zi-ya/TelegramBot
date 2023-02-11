@@ -1,7 +1,7 @@
 import axios from 'axios';
-import { JClientID, JClientSecret } from '../../config';
+import { JClientID, JClientSecret } from '../../config/index.js';
 
-module.exports = {
+export default {
   name: 'node',
   description:
     'Executes Nodejs/Javascript\n\nWRANING: Dont use String templates',
