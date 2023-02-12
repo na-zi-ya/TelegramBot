@@ -17,7 +17,8 @@ const getAllCommands = async () => {
       .filter((file) => file.endsWith('.js'));    // get files from each command folder
     for (const file of commandFiles) {
       const command = await import(`./src/commands/${folder}/${file}`); // dynamically import command files
-      collection.set(command.name, command);
+      console.log("command:", command.default.name, folder); 
+      collection.set(command.default.name, command);
     }
   }
 }
@@ -25,6 +26,7 @@ const getAllCommands = async () => {
 getAllCommands();
 
 bot.on('message', (ctx) => {
+  console.log('Message: ', ctx.message);
   if (!ctx.message.text || !ctx.message.text.startsWith('/')) return;   // do nothing if non-text message is sent.
 
   const commandText = ctx.message.text.match(/\/[a-z]*/)[0].substr(1);  // grab the command name from the text.
