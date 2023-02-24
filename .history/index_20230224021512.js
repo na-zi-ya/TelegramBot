@@ -31,12 +31,11 @@ bot.on('message', (ctx) => {
 
   const commandText = ctx.message.text.match(/\/[a-z]*/)[0].substr(1);  // grab the command name from the text.
 
-  if (!collection.has(commandText)) return ctx.reply( `Command Not Found Please type /help to see list of commands`)
-  // ctx.reply(`No command text found`);   // if no command is found in collection, return.
+  if (!collection.has(commandText)) return `No command text found`;   // if no command is found in collection, return.
 
   let [commandName, ...args] = ctx.message.text.split(' ');
   const {default: command} = collection.get(commandName.substr(1));   // get the command object from the collection map.
-
+  console.log("Command", command);
   if (!command) return ctx.reply(`No command`);   // if no command found, return.
 
   // if arguments are not passed for the commands which requires arguments.

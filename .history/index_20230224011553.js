@@ -27,17 +27,16 @@ getAllCommands();
 
 bot.on('message', (ctx) => {
   console.log('Message: ', ctx.message);
-  if (!ctx.message.text || !ctx.message.text.startsWith('/')) return ctx.reply(`Please try with /`);   // do nothing if non-text message is sent.
+  if (!ctx.message.text || !ctx.message.text.startsWith('/')) return `No commands Found`;   // do nothing if non-text message is sent.
 
   const commandText = ctx.message.text.match(/\/[a-z]*/)[0].substr(1);  // grab the command name from the text.
 
-  if (!collection.has(commandText)) return ctx.reply( `Command Not Found Please type /help to see list of commands`)
-  // ctx.reply(`No command text found`);   // if no command is found in collection, return.
+  if (!collection.has(commandText)) return;   // if no command is found in collection, return.
 
   let [commandName, ...args] = ctx.message.text.split(' ');
   const {default: command} = collection.get(commandName.substr(1));   // get the command object from the collection map.
-
-  if (!command) return ctx.reply(`No command`);   // if no command found, return.
+  
+  if (!command) return;   // if no command found, return.
 
   // if arguments are not passed for the commands which requires arguments.
   if (command.args && !args.length) {
