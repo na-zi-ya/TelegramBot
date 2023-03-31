@@ -1,6 +1,6 @@
 import cheerio from 'cheerio';
 import axios from 'axios';
-import { MAPBOX_KEY } from '../config';
+import { MAPBOX_KEY } from '../config/index.js';
 
 const iterateHTML = (result, attr) => {
   const arr = [];
@@ -65,6 +65,7 @@ const getCityCords = (cityName) =>
   axios
     .get(
       `http://api.mapbox.com/geocoding/v5/mapbox.places/${cityName}.json?access_token=${MAPBOX_KEY}`
+
     )
     .then((result) => {
       const cords = result.data.features[0].center.reverse();

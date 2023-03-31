@@ -1,6 +1,6 @@
-import google from '../../services/google';
+import google from '../../services/google.js';
 
-module.exports = {
+export default {
   name: 'google',
   description: 'Get search results from Google',
   usage: '<query-to-search>',

@@ -1,4 +1,4 @@
-import { fetchHTML, iterateLINKS, iterateHTML } from '../helpers';
+import { fetchHTML, iterateLINKS, iterateHTML } from '../helpers/index.js';
 
 function toEscapeMSg(str) {
   return str
