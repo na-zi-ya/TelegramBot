@@ -29,7 +29,6 @@ For example, if you want to create an admin specific command, kick, then you can
 ![image](https://user-images.githubusercontent.com/76842801/214856312-06a49312-da28-43a5-9ee5-8fc70fef833d.png)
 ![image](https://user-images.githubusercontent.com/76842801/214858170-ad947331-6e62-4469-b9d0-c5baf58f1bc5.png)
 ![image](https://user-images.githubusercontent.com/76842801/218337470-e61aa718-9914-4f90-9438-67a8c3568920.png)
-![image](https://user-images.githubusercontent.com/76842801/230742311-d58a338d-bc89-4b2b-9ff8-45fc18e9db1a.png)
 
 
 
